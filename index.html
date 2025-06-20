@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juancrafe - Tu tienda de tecnología</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Juancrafe</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#productos" class="nav-link">Productos</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon" id="cartIcon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+      
+        <section id="inicio" class="section active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h2>Bienvenido a Juancrafe</h2>
+                    <p>La mejor plataforma para comprar prdoductos unicos a precios bajos</p>
+                    <a href="#productos" class="btn">Ver productos</a>
+                </div>
+            </div>
+            
+            <div class="about-section container">
+                <h3>Sobre Nosotros</h3>
+                <p>Somos una plataforma que permite a los usuarios adquirir productos a precios de calidad con garantía y soporte técnico especializado.</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Productos Garantizados</h4>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-truck"></i>
+                        <h4>Envíos Rápidos</h4>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-headset"></i>
+                        <h4>Soporte 24/7</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="productos" class="section">
+            <div class="container">
+                <h2>Nuestros Productos</h2>
+                <div class="product-filters">
+                    <button class="filter-btn active" data-category="all">Todos</button>
+                    <button class="filter-btn" data-category="computacion">Computación</button>
+                    <button class="filter-btn" data-category="moviles">Móviles</button>
+                    <button class="filter-btn" data-category="accesorios">Accesorios</button>
+                </div>
+                <div class="product-grid" id="productGrid">
+                   
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contacto" class="section">
+            <div class="container">
+                <h2>Contáctanos</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Información de contacto</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Av. Canta Callao, Lima</p>
+                        <p><i class="fas fa-phone"></i> +51 970 362 561</p>
+                        <p><i class="fas fa-envelope"></i> juancrafeS@juancrafe.com</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <h3>Envíanos un mensaje</h3>
+                        <div class="form-group">
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Asunto:</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje:</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <aside class="cart-sidebar" id="cartSidebar">
+            <div class="cart-header">
+                <h3><i class="fas fa-shopping-cart"></i> Tu Carrito</h3>
+                <button class="close-cart" id="closeCart"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="cart-items" id="cartItems">
+
+            </div>
+            <div class="cart-total">
+                <p>Total: <span id="cartTotal">$0.00</span></p>
+                <button class="checkout-btn" id="checkoutBtn">Finalizar Compra</button>
+            </div>
+        </aside>
+
+        <div class="overlay" id="overlay"></div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Juancrafe</h4>
+                    <p>La mejor plataforma para comprar prdoductos unicos a precios bajos.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Canta Callao, Lima</p>
+                    <p><i class="fas fa-phone"></i> +51 970 362 561</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Juancrafe. Todas las ventas son seguras y anonimas.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 id="modalTitle">¡Gracias por tu mensaje!</h3>
+            <p id="modalMessage">Hemos recibido tu comentario y nos pondremos en contacto contigo pronto.</p>
+            <button id="closeConfirmation" class="modal-btn">Aceptar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
